@@ -1,0 +1,86 @@
+// Traverse Ways
+undefined
+var arr = [10,20,30,40,50];
+undefined
+// Trad Loop
+undefined
+for(var i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+VM269:2 10
+VM269:2 20
+VM269:2 30
+VM269:2 40
+VM269:2 50
+undefined
+arr;
+(5) [10, 20, 30, 40, 50]
+for(var i of arr){
+    console.log(i);
+}
+VM351:2 10
+VM351:2 20
+VM351:2 30
+VM351:2 40
+VM351:2 50
+undefined
+arr;
+(5) [10, 20, 30, 40, 50]
+typeof arr;
+'object'
+arr.forEach
+ƒ forEach() { [native code] }
+arr.forEach(function(value){
+    console.log('Value is value);
+})
+VM498:2 Uncaught SyntaxError: Invalid or unexpected token
+arr.forEach(function(value){
+    console.log('Value is ',value);
+})
+VM510:2 Value is  10
+VM510:2 Value is  20
+VM510:2 Value is  30
+VM510:2 Value is  40
+VM510:2 Value is  50
+undefined
+arr.forEach(function(value, index){
+    console.log('Value is ',value, 'Index ', index);
+})
+VM587:2 Value is  10 Index  0
+VM587:2 Value is  20 Index  1
+VM587:2 Value is  30 Index  2
+VM587:2 Value is  40 Index  3
+VM587:2 Value is  50 Index  4
+undefined
+for(var index in arr){
+    console.log(index);
+}
+VM701:2 0
+VM701:2 1
+VM701:2 2
+VM701:2 3
+VM701:2 4
+undefined
+for(var index in arr){
+    console.log(index, arr[index]);
+}
+VM742:2 0 10
+VM742:2 1 20
+VM742:2 2 30
+VM742:2 3 40
+VM742:2 4 50
+undefined
+var obj = {id:1001, name:'Amit'};
+undefined
+for(var key in obj){
+    console.log(key);
+}
+VM872:2 id
+VM872:2 name
+undefined
+for(var key in obj){
+    console.log(key , obj[key]);
+}
+VM915:2 id 1001
+VM915:2 name Amit
+undefined

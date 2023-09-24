@@ -1,0 +1,185 @@
+// IQ What is NaN , Infinity?
+undefined
+var a= 10/0;
+undefined
+a;
+Infinity
+a;
+Infinity
+var b = 10;
+undefined
+b;
+10
+typeof b;
+'number'
+typeof a;
+'number'
+a=10-"Amit";
+NaN
+a;
+NaN
+typeof a;
+'number'
+typeof Infinity;
+'number'
+typeof NaN;
+'number'
+isNaN(a);
+true
+isFinite(10);
+true
+isFinite(10/0);
+false
+"Amit "+"Srivastava";
+'Amit Srivastava'
+"Amit" + 100;
+'Amit100'
+"Ram"-"Kumar";
+NaN
+"100"+"200";
+'100200'
+"100"+200;
+'100200'
+parseInt("100")+200;
+300
++"100"
+100
+parseInt("100");
+100
+parseInt("100") + +"200"
+300
+"100"-"200";
+-100
+"100"*"200";
+20000
+"100"/"200";
+0.5
+var myname  = "Amit";
+undefined
+typeof myname;
+'string'
+myname = 'Amit';
+'Amit'
+typeof myname;
+'string'
+myname = 'A';
+'A'
+typeof myname;
+'string'
+myname = `hjkdghjhgdfkgjhgkjd
+ljhlfjg
+gjhdfkj
+gjhdfkj`;
+'hjkdghjhgdfkgjhgkjd\nljhlfjg\ngjhdfkj\ngjhdfkj'
+console.log(myname);
+VM1111:1 hjkdghjhgdfkgjhgkjd
+ljhlfjg
+gjhdfkj
+gjhdfkj
+undefined
+var a = 10;
+undefined
+var b=20;
+undefined
+`A is ${a} and B is ${b}`; // Template Literal
+'A is 10 and B is 20'
+// String Interpolation
+undefined
+// ES6
+undefined
+var canName = 'Amit';
+var salary = 111111111;
+var offerLetter = `
+Dear ${canName},
+    Welcome to the Company , Your Salary is ${salary}
+`;
+
+undefined
+offer
+VM1454:1 Uncaught ReferenceError: offer is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1454:1
+offerLetter
+'\nDear Amit,\n    Welcome to the Company , Your Salary is 111111111\n'
+var w = `Age is ${age}`;
+VM1504:1 Uncaught ReferenceError: age is not defined
+    at <anonymous>:1:19
+(anonymous) @ VM1504:1
+var age = 22;
+undefined
+var w = `Age is ${age}`;
+undefined
+w;
+'Age is 22'
+var att = true;
+undefined
+typeof att;
+'boolean'
+100 + att;
+101
+a = 67459867489678947689475968749586798457697495876;
+6.745986748967895e+46
+typeof a;
+'number'
+a;
+6.745986748967895e+46
+a=Number.MAX_SAFE_INTEGER;
+9007199254740991
+a=54365677567567567567567567567567n;
+54365677567567567567567567567567n
+typeof a;
+'bigint'
+a=BigInt("573894758735892739847298375893479574895");
+573894758735892739847298375893479574895n
+a+4234354546577657n;
+573894758735892739847302610248026152552n
+a+23343;
+VM1983:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:2
+(anonymous) @ VM1983:1
+a=Symbol();
+Symbol()
+b = Symbol();
+Symbol()
+a==b;
+false
+var y = 10;
+undefined
+y + 20;
+30
+y;
+10
+y = y + 20;
+30
+var arr = [10,20,30,40];
+undefined
+typeof arr;
+'object'
+arr.push(111);
+5
+arr;
+(5) [10, 20, 30, 40, 111]
+arr.pop();
+111
+arr;
+(4) [10, 20, 30, 40]
+arr =null;
+null
+arr;
+null
+typeof arr;
+'object'
+var arr = [10,20,30,40];
+undefined
+var f = arr.filter(e=>e);
+undefined
+f;
+(4) [10, 20, 30, 40]
+arr == f;
+false
+arr.push(1000);
+5
+arr;
+(5) [10, 20, 30, 40, 1000]
+f;
+(4) [10, 20, 30, 40]

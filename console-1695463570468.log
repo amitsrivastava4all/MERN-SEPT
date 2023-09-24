@@ -1,0 +1,40 @@
+var a;
+undefined
+a=10;
+10
+var b;
+undefined
+b;
+undefined
+typeof b;
+'undefined'
+typeof a;
+'number'
+a=1;
+1
+typeof a;
+'number'
+a=1111111111;
+1111111111
+typeof a;
+'number'
+a=90.20;
+90.2
+typeof a;
+'number'
+a=10/0;
+Infinity
+typeof a;
+'number'
+a;
+Infinity
+a=10-"AMit";
+NaN
+typeof a;
+'number'
+isNaN(a);
+true
+isNaN(a)?0:a;
+0
+isFinite(10/0);
+false

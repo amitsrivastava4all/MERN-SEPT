@@ -1,0 +1,46 @@
+// dot (Member Access Operator) vs [] Associative Array
+undefined
+var obj = {id:1001, name:'Amit'};
+undefined
+var dhoni = {name:'MS Dhoni', age:43, city:'Mumbai', 100:14,50:55 };
+undefined
+dhoni.name
+'MS Dhoni'
+dhoni.age;
+43
+dhoni.city
+'Mumbai'
+dhoni.ghdkjghdkjf;
+undefined
+dhoni.100;
+VM401:1 Uncaught SyntaxError: Unexpected number
+dhoni['name'];
+'MS Dhoni'
+dhoni['age'];
+43
+dhoni[100];
+14
+dhoni.phone="222222";
+'222222'
+dhoni;
+{50: 55, 100: 14, name: 'MS Dhoni', age: 43, city: 'Mumbai', phone: '222222'}
+dhoni.full address = "Navi Mumbai";
+VM643:1 Uncaught SyntaxError: Unexpected identifier 'address'
+dhoni.["full address"] = "Navi Mumbai";
+VM651:1 Uncaught SyntaxError: Unexpected token '['
+dhoni["full address"] = "Navi Mumbai";
+'Navi Mumbai'
+dhoni;
+{50: 55, 100: 14, name: 'MS Dhoni', age: 43, city: 'Mumbai', phone: '222222', full address: 'Navi Mumbai'}
+dhoni['full address'];
+'Navi Mumbai'
+var myKey = "name";
+undefined
+dhoni.myKey;
+undefined
+dhoni[myKey];
+'MS Dhoni'
+myKey = "age";
+'age'
+dhoni[myKey];
+43

@@ -1,0 +1,27 @@
+// object ways
+undefined
+var obj = {};
+undefined
+var w = new Object();
+undefined
+obj;
+{}
+w;
+{}
+var obj2 = {
+show : function (){}
+}
+undefined
+obj2.show();
+undefined
+console.log
+ƒ log() { [native code] }
+Math.sin
+ƒ sin() { [native code] }
+function add(){}
+undefined
+var validations = {
+    phone(){},
+    email(){}
+}
+undefined

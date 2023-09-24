@@ -1,0 +1,42 @@
+// Object Literal
+undefined
+var obj = {};
+undefined
+typeof obj;
+'object'
+var temp = [10,31,37,38,39,22,23,21];
+undefined
+temp[0];
+10
+var temp2 = {"shimla":10, "delhi":31};
+undefined
+typeof temp2;
+'object'
+temp2['shimla'];
+10
+typeof temp;
+'object'
+typeof temp2;
+'object'
+temp instanceof Array;
+true
+temp2 instanceof Array;
+false
+temp2 instanceof Object;
+true
+typeof Array;
+'function'
+typeof Object;
+'function'
+temp ;
+(8) [10, 31, 37, 38, 39, 22, 23, 21]
+temp instanceof Array;
+true
+temp instanceof Object;
+true
+temp2 ;
+{shimla: 10, delhi: 31}
+temp2 instanceof Array;
+false
+temp2 instanceof Object;
+true
