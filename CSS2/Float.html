@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            height: 500px;
+            /* border: 12px solid red; */
+        }
+
+        .col{
+            height: 250px;
+            width: 45%;
+            background-color: green;
+        }
+
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+
+        .row::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col left"></div>
+        <div class="col right"></div>
+    </div>
+</body>
+</html>
