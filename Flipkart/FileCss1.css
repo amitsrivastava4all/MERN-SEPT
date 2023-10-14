@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+a{
+    text-decoration : none ;
+}
 
 #header{
     background-color: azure;
@@ -21,7 +24,7 @@
 }
 
 .container{
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -37,6 +40,12 @@
     width: 20%;
 }
 
+.logo img{
+    width: 90%;
+    margin-left : 20%;
+    margin-top: 12%;
+}
+
 .search{
     width: 75%;
     margin-left: 2.5%;
@@ -47,10 +56,18 @@ img{
 }
 
 .search input[type="text"]{
-    width: 100%;
+    width: 95%;
     height: 30px;
     border-radius: 2px;
-    border-color: burlywood;
+    border-color: transparent;
+    background-color: #F0F5FF;
+    background-image: url("https://icon-library.com/images/search-for-icon/search-for-icon-1.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 5%;
+    background-position-x: 1%;
+    background-size: 20px 20px;
+    margin-top: 2%;
 }
 
 ul li{
@@ -71,4 +88,36 @@ ul li{
     color: black;
     display: block;
     text-align: center;
+}
+
+
+/* --------------------section-1 */
+
+#section-1{
+    background-color: #e6edfc;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+#section-1 .product{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    margin-left: 6px;
+}
+
+#section-1 .product img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+#section-1 h4{
+    margin-top: 8px;
+    color: #000;
+    font-weight: 500;
+}
+
+#banner{
+    margin-top: 10px;
 }
