@@ -1,0 +1,325 @@
+// How many way to Create Functions in JS?
+undefined
+// Function Defination Style
+undefined
+function show(){
+    console.log("I am the Function");2
+}
+undefined
+typeof show;
+'function'
+show(); // call the function
+VM338:2 I am the Function
+undefined
+function show(){
+    console.log("I am the Function");
+}
+undefined
+show();
+VM425:2 I am the Function
+undefined
+function show(){
+    console.log("I am the Function");
+    return 100;
+}
+undefined
+show();
+VM464:2 I am the Function
+100
+function show(x,y){
+    //console.log("I am the Function");
+    return x+y;
+}
+undefined
+show(10,20);
+30
+output(); 
+function output(){
+    return 2000;
+}
+2000
+window.output;
+ƒ output(){
+    return 2000;
+}
+typeof window;
+'object'
+window == this;
+true
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+output(); // window.output();
+2000
+window.output(); // Default Binding
+2000
+// 2. Function Expression or Anonymous Function
+undefined
+// var a; // Variable Hoisting
+console.log(a); // undefined
+var a = 10; // a =10
+var a = 20; // a = 20
+console.log(a); // 20
+VM1258:2 undefined
+VM1258:5 20
+undefined
+var fn = function(){
+    console.log("I am a Function Expression");
+}
+undefined
+typeof fn;
+'function'
+fn();
+VM1365:2 I am a Function Expression
+undefined
+var fn = function(x,y){
+   // console.log("I am a Function Expression");
+    return x * y;
+}
+undefined
+fn(10,5);
+50
+// When u bind with events Use Anonymous fn
+undefined
+show;
+ƒ show(x,y){
+    //console.log("I am the Function");
+    return x+y;
+}
+show(10,20);
+30
+show = 100;
+100
+typeof show;
+'number'
+show(10,20)
+VM1758:1 Uncaught TypeError: show is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM1758:1
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+    return x - y;
+    }
+    return add, sub;
+}
+var t = Calc();
+undefined
+t;
+ƒ (x,y){
+    return x - y;
+    }
+t(10,2);
+8
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+    return x - y;
+    }
+    return [add, sub];
+}
+var t = Calc();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+t[0];
+ƒ (x,y){
+        return x + y;
+    }
+t[1];
+ƒ (x,y){
+    return x - y;
+    }
+t[0](10,2);
+12
+t[1](10,2);
+8
+show();
+function show(){
+return "Hello";
+}
+'Hello'
+fn2();
+var fn2 = function(){
+    console.log("I am Anonymous ");
+}
+VM2241:1 Uncaught TypeError: fn2 is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2241:1
+// var fn3;
+console.log('Fn3 is ', fn3); // undefined
+fn3();
+
+var fn3 = function(){
+    console.log("I am Anonymous ");
+}
+VM2332:2 Fn3 is  undefined
+VM2332:3 Uncaught TypeError: fn3 is not a function
+    at <anonymous>:3:1
+(anonymous) @ VM2332:3
+undefined();
+VM2356:1 Uncaught TypeError: undefined is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2356:1
+// Named Function Expression
+undefined
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+    return x - y;
+    }
+    return [add, sub];
+}
+var t = Calc();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+t[0](10,20);
+30
+t[1](10,20);
+-10
+function Calc(){
+    var add = function addition(x,y){
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+    return x - y;
+    }
+    return [add, sub];
+}
+var t = Calc();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ addition(x,y)1: ƒ subtraction(x,y)length: 2[[Prototype]]: Array(0)
+t[0](10,20);
+30
+function Calc(){
+    var add = function (x,y){
+        return x + y;
+    }
+    var sub = function (x,y){
+    return x - y;
+    }
+    return {add, sub};
+}
+var t = Calc();
+undefined
+t;
+{add: ƒ, sub: ƒ}
+t.add(10,20);
+30
+t.sub(10,2);
+8
+typeof t;
+'object'
+t instanceof Object;
+true
+// IIFE
+//(Define)()
+(function(){
+    console.log("I am IIFE");
+})();
+VM2875:4 I am IIFE
+undefined
+// IIFE
+//(Define)()
+(function(){
+    console.log("I am IIFE");
+})();
+VM2877:4 I am IIFE
+undefined
+(function(){
+for(var i = 1; i<=10; i++){
+    console.log(i);
+}
+})();
+console.log(i);
+VM3037:3 1
+VM3037:3 2
+VM3037:3 3
+VM3037:3 4
+VM3037:3 5
+VM3037:3 6
+VM3037:3 7
+VM3037:3 8
+VM3037:3 9
+VM3037:3 10
+VM3037:6 Uncaught ReferenceError: i is not defined
+    at <anonymous>:6:13
+(anonymous) @ VM3037:6
+var o = {};
+undefined
+typeof o;
+'object'
+var e = function(){}
+undefined
+var o2 = new Object();
+undefined
+o2;
+{}
+typeof o2;
+'object'
+var f = new Function();
+undefined
+f;
+ƒ anonymous(
+) {
+
+}
+o2;
+{}
+o2.toString();
+'[object Object]'
+typeof f;
+'function'
+f.length;
+0
+var f = new Function("a");
+undefined
+f;
+ƒ anonymous(
+) {
+a
+}
+var f = new Function("a","b","c");
+undefined
+f;
+ƒ anonymous(a,b
+) {
+c
+}
+var f = new Function("a","b","return a + b");
+undefined
+f;
+ƒ anonymous(a,b
+) {
+return a + b
+}
+f(10,20);
+30
+o;
+{}
+o();
+VM3510:1 Uncaught TypeError: o is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM3510:1
+var args1 = "a";
+undefined
+var args2 = "b";
+undefined
+var body = "return a * b";
+undefined
+var f3 = new Function(args1, args2, body);
+undefined
+f3;
+ƒ anonymous(a,b
+) {
+return a * b
+}
+f3(10,20);
+200
