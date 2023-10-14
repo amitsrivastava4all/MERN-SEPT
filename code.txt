@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+
+<button id="ok">Click Me </button>
+
+<script>
+    	var bt = document.getElementById('ok');
+        bt.addEventListener('click', function(){
+        alert("Click Happens");
+});
+    </script>
+</body>
+</html> 
