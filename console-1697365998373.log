@@ -1,0 +1,47 @@
+var add = function(){
+    console.log('I am add ');
+}
+undefined
+typeof add;
+'function'
+add();
+VM90:2 I am add 
+undefined
+const show= (x,y)=>x+y;
+undefined
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+function show2(x,y){
+    return this.a + this.b + x  + y;
+}
+undefined
+var a = 10;
+undefined
+window.a;
+10
+var b = 20;
+undefined
+window.b;
+20
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+a = 1000000;
+1000000
+show2(1000,2000);
+1003020

@@ -1,0 +1,97 @@
+// Arrow Function Fitment
+undefined
+const obj = {
+   arr:[1,20,3,40,5,90,100,33],
+   even:[],
+   odd:[],
+   fillEvenOdd(){
+       this.arr.forEach(function(e){
+           if(e%2==0){
+               this.even.push(e);
+           }
+           else{
+               this.odd.push(e);
+           }
+           //console.log('E is ', e);
+       })
+   } 
+};
+undefined
+obj.fillEvenOdd();
+VM340:11 Uncaught TypeError: Cannot read properties of undefined (reading 'push')
+    at <anonymous>:11:25
+    at Array.forEach (<anonymous>)
+    at Object.fillEvenOdd (<anonymous>:6:17)
+    at <anonymous>:1:5
+(anonymous) @ VM340:11
+fillEvenOdd @ VM340:6
+(anonymous) @ VM368:1
+const obj = {
+   arr:[1,20,3,40,5,90,100,33],
+   even:[],
+   odd:[],
+   fillEvenOdd(){
+       var that = this;
+       this.arr.forEach(function(e){
+           if(e%2==0){
+               that.even.push(e);
+           }
+           else{
+               that.odd.push(e);
+           }
+           //console.log('E is ', e);
+       })
+   } 
+};
+obj.fillEvenOdd();
+undefined
+const obj = {
+   arr:[1,20,3,40,5,90,100,33],
+   even:[],
+   odd:[],
+   fillEvenOdd(){
+       var that = this;
+       this.arr.forEach(function(e){
+           if(e%2==0){
+               that.even.push(e);
+           }
+           else{
+               that.odd.push(e);
+           }
+           //console.log('E is ', e);
+       })
+   } 
+};
+
+undefined
+obj.fillEvenOdd();
+undefined
+obj.even;
+(4) [20, 40, 90, 100]
+obj.odd;
+(4) [1, 3, 5, 33]
+const obj = {
+   arr:[1,20,3,40,5,90,100,33],
+   even:[],
+   odd:[],
+   fillEvenOdd(){
+      
+       this.arr.forEach((e)=>{
+           if(e%2==0){
+               this.even.push(e);
+           }
+           else{
+               this.odd.push(e);
+           }
+           //console.log('E is ', e);
+       })
+   } 
+};
+
+undefined
+obj.fillEvenOdd();
+undefined
+obj.even;
+(4) [20, 40, 90, 100]
+obj.odd;
+(4) [1, 3, 5, 33]

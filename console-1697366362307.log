@@ -1,0 +1,73 @@
+var add = function(){
+    console.log('I am add ');
+}
+undefined
+typeof add;
+'function'
+add();
+VM90:2 I am add 
+undefined
+const show= (x,y)=>x+y;
+undefined
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+show(10,20);
+30
+function show2(x,y){
+    return this.a + this.b + x  + y;
+}
+undefined
+var a = 10;
+undefined
+window.a;
+10
+var b = 20;
+undefined
+window.b;
+20
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+show2(1000,2000);
+3030
+a = 1000000;
+1000000
+show2(1000,2000);
+1003020
+var obj2  = {a:1, b:2};
+undefined
+show2.call(obj2,1000,2000);
+3003
+show2(1000,2000);
+1003020
+show;
+(x,y)=>x+y
+show.call(obj2,1000,2000);
+3000
+const show= (x,y)=>this.a + this.b  + x+y;
+undefined
+show.apply(obj2,1000,2000);
+VM1318:1 Uncaught TypeError: CreateListFromArrayLike called on non-object
+    at <anonymous>:1:6
+(anonymous) @ VM1318:1
+show.apply(obj2,[1000,2000]);
+1003020
+var w = new show(10,20);
+VM1406:1 Uncaught TypeError: show is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM1406:1
+var w2 = new show2(10,20);
+undefined
+w2;
+show2 {}

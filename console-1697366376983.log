@@ -1,0 +1,59 @@
+// IQ -  What is Arrow Function and it's usage?
+undefined
+/*function add(x,y){
+   return x +y; 
+}*/
+const add = (x,y)=>x+y; // One Line Fn
+undefined
+typeof add;
+'function'
+add(10,20);
+30
+const adder = (x,y)=>{
+    console.log('X is ', x, ' Y is ' ,y);
+    return x + y;
+}
+undefined
+typeof adder;
+'function'
+adder(100,200);
+VM481:2 X is  100  Y is  200
+300
+function output(){
+    console.log("I am the output fn ");
+}
+undefined
+var e = new output();
+VM654:2 I am the output fn 
+undefined
+typeof e;
+'object'
+e;
+output {}
+e instanceof output;
+true
+function whoAmI(){
+    // this - keyword (Current Calling Object Reference)
+    console.log("I am  ", this);
+}
+undefined
+var y  =  new output();
+VM654:2 I am the output fn 
+undefined
+var y  =  new whoAmI();
+VM861:3 I am   whoAmI {}
+undefined
+whoAmI(); // window.whoAmI()
+VM861:3 I am   Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+adder;
+(x,y)=>{
+    console.log('X is ', x, ' Y is ' ,y);
+    return x + y;
+}
+add;
+(x,y)=>x+y
+var g = new add(10,20);
+VM1107:1 Uncaught TypeError: add is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM1107:1
