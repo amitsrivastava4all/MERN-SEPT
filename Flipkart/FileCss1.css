@@ -121,3 +121,82 @@ ul li{
 #banner{
     margin-top: 10px;
 }
+
+#maha-sale .container{
+    margin-bottom: 10px;
+}
+
+#maha-sale .row .prod{
+    display: inline-block;
+    width: 33%;
+    margin-left: 4px;
+}
+
+#maha-sale .prod img{
+    height: 280px;
+    width: 100%;
+}
+
+#section-2 {
+    background-color: #e6edfc;
+    padding: 1% 0;
+    margin-top: 1%;
+}
+
+#section-2 h2{
+    margin-left: 1.5em;
+    margin-bottom: 10px;
+}
+
+#section-2 h3{
+    margin-top: 10px;
+    color: #000;
+    font: 1em sans-serif;
+}
+
+#section-2 .product{
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    width: 15%;
+    margin: 1% 2.2%;
+    border-radius: 2%;
+    position: relative;
+}
+
+#section-2 .product img{
+    height: 180px;
+    width: 160px;
+    margin-top: 20px;
+}
+
+.product .wishlist{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+}
+
+.product .p-img{
+    position: relative;
+}
+
+.product .addtc{
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0px;
+    display: none;
+}
+
+.product .addtc button{
+    border: 1px solid blue;
+    background-color: blue;
+    color:#fff;
+
+    padding: 8px;
+    width: 100%;
+}
+.product:hover .addtc{
+    display: block;
+}
