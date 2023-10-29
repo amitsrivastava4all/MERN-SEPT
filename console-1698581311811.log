@@ -1,0 +1,6 @@
+var exp = "10+20-3";
+undefined
+eval(exp);
+27
+eval("alert('App Hack')");
+undefined

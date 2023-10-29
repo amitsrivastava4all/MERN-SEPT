@@ -1,0 +1,12 @@
+var r = 0;
+undefined
+var r2 = -0;
+undefined
+r == r2;
+true
+r===r2;
+true
+NaN ==NaN
+false
+Object.is(r,r2)
+false

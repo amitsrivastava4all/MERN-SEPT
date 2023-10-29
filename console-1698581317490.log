@@ -1,0 +1,6 @@
+screen.height;
+982
+screen.width;
+1512
+window.open('https://www.skillrisers.com');
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}

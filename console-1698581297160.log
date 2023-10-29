@@ -1,0 +1,46 @@
+var a = "";
+undefined
+typeof a;
+'string'
+var arr = [];
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+a == arr;
+true
+arr.toString();
+''
+a==arr;
+true
+a==arr.toString();
+true
+a;
+''
+arr;
+[]
+arr.toString();
+''
+var obj = {};
+undefined
+typeof obj;
+'object'
+a == obj;
+false
+obj.toString();
+'[object Object]'
+a;
+''
+a==obj;
+false
+obj == arr;
+false
+var obj = {id:1001, name:'Amit'};
+undefined
+obj.toString();
+'[object Object]'
+var arr = [10,20,30,40];;
+undefined
+arr.toString();
+'10,20,30,40'
