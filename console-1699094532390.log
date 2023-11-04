@@ -1,0 +1,35 @@
+var arr = [10,20,30,40,50,10,20,10,90,100,20,10];
+undefined
+arr.find(e=>e==50);
+50
+arr.find(e=>e==5000);
+undefined
+arr.findIndex(e=>e==50);
+4
+arr.findIndex(e=>e==10);
+0
+arr.findIndex(e=>e==20);
+1
+arr.findLastIndex(e=>e==20);
+10
+arr.filter(e=>e==10);
+(4) [10, 10, 10, 10]
+arr.filter(e=>e==10).length;
+4
+arr.reduce((acc, e, i)=>{
+    if(e==10){
+        const obj = {i:e};
+        acc.push(obj);
+    }
+    return acc;
+},[]);
+(4) [{…}, {…}, {…}, {…}]0: {i: 10}i: 10[[Prototype]]: Object1: {i: 10}2: {i: 10}3: {i: 10}length: 4[[Prototype]]: Array(0)
+arr.reduce((acc, e, i)=>{
+    if(e==10){
+        const obj = {};
+        obj[i] = e;
+        acc.push(obj);
+    }
+    return acc;
+},[]);
+(4) [{…}, {…}, {…}, {…}]0: {0: 10}1: {5: 10}2: {7: 10}3: {11: 10}length: 4[[Prototype]]: Array(0)

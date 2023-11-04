@@ -1,0 +1,32 @@
+var arr = [10,20,30,40,50,10,20,10,90,100,20,10];
+undefined
+arr.sort();
+(12) [10, 10, 10, 10, 100, 20, 20, 20, 30, 40, 50, 90]
+arr;
+(12) [10, 10, 10, 10, 100, 20, 20, 20, 30, 40, 50, 90]
+arr.sort((a,b)=>a-b);
+(12) [10, 10, 10, 10, 20, 20, 20, 30, 40, 50, 90, 100]
+arr.sort((a,b)=>b-a);
+(12) [100, 90, 50, 40, 30, 20, 20, 20, 10, 10, 10, 10]
+var names = ["ram", "amit","shyam","anil", "ajay"];
+undefined
+"ram".localeCompare("amit");
+1
+"amit".localeCompare("amit");
+0
+"amit".localeCompare("ram");
+-1
+names.sort((a,b)=>a.localeCompare(b));
+(5) ['ajay', 'amit', 'anil', 'ram', 'shyam']
+names.sort((a,b)=>b.localeCompare(a));
+(5) ['shyam', 'ram', 'anil', 'amit', 'ajay']
+var emps = [{id:100, name:'Amit', salary:2222}, {id:10, name:'Shyam', salary:3222},{id:20, name:'Ram', salary:1222}]
+undefined
+emps.sort((a,b)=>a.id-b.id);
+(3) [{…}, {…}, {…}]0: {id: 10, name: 'Shyam', salary: 3222}1: {id: 20, name: 'Ram', salary: 1222}2: {id: 100, name: 'Amit', salary: 2222}length: 3[[Prototype]]: Array(0)
+emps.sort((a,b)=>a.salary-b.salary);
+(3) [{…}, {…}, {…}]0: {id: 20, name: 'Ram', salary: 1222}1: {id: 100, name: 'Amit', salary: 2222}2: {id: 10, name: 'Shyam', salary: 3222}length: 3[[Prototype]]: Array(0)
+emps.sort((a,b)=>b.salary-a.salary);
+(3) [{…}, {…}, {…}]0: {id: 10, name: 'Shyam', salary: 3222}1: {id: 100, name: 'Amit', salary: 2222}2: {id: 20, name: 'Ram', salary: 1222}length: 3[[Prototype]]: Array(0)
+emps.sort((a,b)=>a.name.localeCompare(b.name));
+(3) [{…}, {…}, {…}]0: {id: 100, name: 'Amit', salary: 2222}1: {id: 20, name: 'Ram', salary: 1222}2: {id: 10, name: 'Shyam', salary: 3222}length: 3[[Prototype]]: Array(0)

@@ -1,0 +1,12 @@
+var prices = [1000,2000,3000,4000,5000,6000];
+undefined
+prices.every(e=>e>3000);
+false
+prices.every(e=>e>300);
+true
+prices.every(e=>e>1300);
+false
+prices.some(e=>e>1300);
+true
+prices.some(e=>e>5300);
+true

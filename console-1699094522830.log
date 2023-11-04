@@ -1,0 +1,48 @@
+var prices = [1000,2000,3000,4000,5000,6000];
+undefined
+var pricesWithTax = prices.map(price=>price + price * 0.18);
+undefined
+prices;
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+pricesWithTax;
+(6) [1180, 2360, 3540, 4720, 5900, 7080]
+var newArray = prices.map(p=>p);
+undefined
+prices;
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+newArray;
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+prices == newArray;
+false
+newArray[0] = 9999;
+9999
+newArray;
+(6) [9999, 2000, 3000, 4000, 5000, 6000]
+prices;
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+prices;
+(6) [1000, 2000, 3000, 4000, 5000, 6000]
+var e = 1000;
+undefined
+e.toLocaleString('hi');
+'1,000'
+e.toLocaleString('en');
+'1,000'
+e = 1000000;
+1000000
+e.toLocaleString('hi');
+'10,00,000'
+e.toLocaleString('en');
+'1,000,000'
+var prices = [100000,2222000,3055600,4655000,5000,6000];
+undefined
+prices.map(p=>p.toLocaleString('hi'));
+(6) ['1,00,000', '22,22,000', '30,55,600', '46,55,000', '5,000', '6,000']
+prices.map(p=>'Rs '+p.toLocaleString('hi'));
+(6) ['Rs 1,00,000', 'Rs 22,22,000', 'Rs 30,55,600', 'Rs 46,55,000', 'Rs 5,000', 'Rs 6,000']
+var formattedPrices = prices.map(p=>'Rs '+p.toLocaleString('hi'));
+undefined
+prices;
+(6) [100000, 2222000, 3055600, 4655000, 5000, 6000]
+formattedPrices;
+(6) ['Rs 1,00,000', 'Rs 22,22,000', 'Rs 30,55,600', 'Rs 46,55,000', 'Rs 5,000', 'Rs 6,000']
