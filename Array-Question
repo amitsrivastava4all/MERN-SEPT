@@ -1,0 +1,21 @@
+Q1. Maintain an Array of Employee Object 
+e.g var emps = [{id:1001, name:’Amit’, salary:2222},{id:1002, name:’Ram’, salary:3222}];
+
+Maintain 5 Employee Records
+Do Some Operations
+1. Add New Employee After Amit
+2. Add New Employee in Beginning
+3. Delete Ram Employee
+4. Search Amit by Salary
+5. Compute Total Employee Salary 
+6. Compute Salary of Those Employees whose Name start with A
+7. Compute Highest And Lowest Salary of Employees
+8. Make a Duplicate Array of Employees without spread operator
+9. Traverse All the Employees and Print in this format
+Id is 1001 Name is Amit Salary is $222,2
+10. Compute the Average Salary of Employee
+11. Sort Records by Name in Descending Order
+
+Hint : Array Functions
+Don’t write your own logics.
+
