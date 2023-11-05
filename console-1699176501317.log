@@ -1,0 +1,8 @@
+var arr = [10,20,30,40];
+undefined
+var w = arr.map(e=>e*e);
+undefined
+arr;
+(4) [10, 20, 30, 40]
+w;
+(4) [100, 400, 900, 1600]

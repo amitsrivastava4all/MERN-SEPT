@@ -1,0 +1,42 @@
+// Usage of CallBack Fn in Async
+undefined
+function asyncCall(){
+    setTimeout(()=>{
+      console.log("I will call after 4 sec ");  
+    }, 4000);
+}
+undefined
+function asyncCall(){
+    setTimeout(()=>{
+      console.log("I will call after 4 sec ");  
+        return "I am Done ";
+    }, 4000);
+}
+undefined
+console.log("Start "); // Sync Call
+var r = asyncCall(); // r undefined
+console.log("R is ", r);
+console.log("End ");
+VM489:1 Start 
+VM489:3 R is  undefined
+VM489:4 End 
+undefined
+VM423:3 I will call after 4 sec 
+function getResult(result){
+    console.log("Get the result ", result);
+}
+function asyncCall(fn){
+    setTimeout(()=>{
+      console.log("I will call after 4 sec ");  
+        fn( "I am Done ");
+    }, 4000);
+}
+console.log("Start "); // Sync Call
+asyncCall(getResult);
+
+console.log("End ");
+VM680:10 Start 
+VM680:13 End 
+undefined
+VM680:6 I will call after 4 sec 
+VM680:2 Get the result  I am Done 

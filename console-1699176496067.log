@@ -1,0 +1,30 @@
+// Sync vs Async
+undefined
+function apiCall(){
+    // Async Way
+    setTimeout(()=>{
+        console.log("I will run after few seconds ");
+    }, 5000);
+}
+undefined
+console.log("Hello"); // Sync 
+apiCall(); // setTimeout Async 
+console.log('Hi '); // Sync
+VM410:1 Hello
+VM410:3 Hi 
+undefined
+VM202:4 I will run after few seconds 
+function apiCall(){
+    // Async Way
+    setTimeout(()=>{
+        console.log("I will run after few seconds ");
+    }, 0);
+}
+undefined
+console.log("Hello"); // Sync 
+apiCall(); // setTimeout Async 
+console.log('Hi '); // Sync
+VM419:1 Hello
+VM419:3 Hi 
+undefined
+VM416:4 I will run after few seconds 

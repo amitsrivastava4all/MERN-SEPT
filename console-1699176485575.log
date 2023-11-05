@@ -1,0 +1,23 @@
+// CallBack Hell Problem in JS
+undefined
+setTimeout(()=>{
+    console.log("Call back Function 1 Call ");
+}, 3000)
+1
+VM158:2 Call back Function 1 Call 
+setTimeout(()=>{
+    var firstName = "Amit";
+    console.log("Call back Function 1 Call ");
+    setTimeout(()=>{
+        var middleName = "Kumar";
+        console.log("Call Back Function 2 Call");
+        setTimeout(()=>{
+         var lastName = "Srivastava ";   
+        console.log("Call Back Function 3 Call "+(firstName + middleName + lastName));
+        },5000);
+    }, 4000)
+}, 3000)
+2
+VM532:3 Call back Function 1 Call 
+VM532:6 Call Back Function 2 Call
+VM532:9 Call Back Function 3 Call AmitKumarSrivastava 

@@ -1,0 +1,80 @@
+function add(){
+    let sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+add(10,20);
+30
+add(10,20, 30 ,40, 50);
+150
+console.dir(add);
+VM278:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM158:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+var z = {id:1001, name:'Ram'};
+undefined
+var z2 = z;
+undefined
+z2 == z;
+true
+z2.id++;
+1001
+z2;
+{id: 1002, name: 'Ram'}
+z;
+{id: 1002, name: 'Ram'}
+var z3 = {...z};
+undefined
+z3;
+{id: 1002, name: 'Ram'}
+z3==z;
+false
+z3.id++;
+1002
+z3;
+{id: 1003, name: 'Ram'}
+z;
+{id: 1002, name: 'Ram'}
+function add(...a){
+    let sum = 0;
+    for(let i = 0; i<a.length; i++){
+        sum = sum + a[i];
+    }
+    return sum;
+}
+undefined
+add(10,20);
+30
+add(10,20,30,40);
+100
+function add(x,y,...a){
+    console.log(x,y, a);
+    let sum = 0;
+    for(let i = 0; i<a.length; i++){
+        sum = sum + a[i];
+    }
+    return sum;
+}
+undefined
+add(1,2,3,5,6,7,7);
+VM692:2 1 2 (5) [3, 5, 6, 7, 7]
+28
+function add(x,y,...a, ...w){
+    console.log(x,y, a);
+    let sum = 0;
+    for(let i = 0; i<a.length; i++){
+        sum = sum + a[i];
+    }
+    return sum;
+}
+VM804:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+var w = [100,200];
+undefined
+var w2 = [999,222];
+undefined
+var w3 = [...w, ...w2];
+undefined
+w3;
+(4) [100, 200, 999, 222]
