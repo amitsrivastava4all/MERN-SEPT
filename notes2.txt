@@ -1,0 +1,14 @@
+OS Concepts
+1. What is Program?
+Program is a collection of Instructions
+
+
+2. Process
+Process is an instance of a Program.
+Process - CPU + Memory
+
+Process - Process Sub Unit (Small Unit of Program)
+That is become a Thread.
+Thread - code in execution 
+Main - e.g Thread.
+Multiple Process
