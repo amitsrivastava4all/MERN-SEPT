@@ -1,0 +1,18 @@
+var x = "30";
+undefined
+x++;
+30
+x;
+31
+x= "30";
+'30'
+x + 222;
+'30222'
+x- 33;
+-3
+const num = [1,2,3,4];
+undefined
+const [c] = num;
+undefined
+c;
+1

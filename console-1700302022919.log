@@ -1,0 +1,58 @@
+var arr = [10,20,30,40,50];
+undefined
+var w = arr[1];
+undefined
+w;
+20
+var [x,y] = arr;
+undefined
+x;
+10
+y;
+20
+typeof x;
+'number'
+typeof arr;
+'object'
+var [x,,,y] = arr;
+undefined
+x;
+10
+y;
+40
+var [z] = arr;
+undefined
+z;
+10
+var e = arr;
+undefined
+e;
+(5) [10, 20, 30, 40, 50]
+e=== arr;
+true
+var emp = {id:1001, name:'Ram', age:22, address:'Delhi'};
+undefined
+var q = emp.id;
+undefined
+q;
+1001
+var {age, address} =emp; 
+undefined
+age;
+22
+address;
+'Delhi'
+emp;
+{id: 1001, name: 'Ram', age: 22, address: 'Delhi'}
+function printEmp(e){
+   console.log(e.id, e.name); 
+}
+printEmp(emp);
+VM700:2 1001 'Ram'
+undefined
+function printEmp({id, name}){
+   console.log(id , name); 
+}
+printEmp(emp);
+VM757:2 1001 'Ram'
+undefined

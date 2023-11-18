@@ -1,0 +1,261 @@
+// What is Truthy & Falsy in JS?
+undefined
+var a = 0;
+undefined
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM232:5 Falsy 
+undefined
+a=1000;
+1000
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM252:2 Truthy
+undefined
+a=-100;
+-100
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM274:2 Truthy
+undefined
+a="";
+''
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM293:5 Falsy 
+undefined
+a='Amit';
+'Amit'
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM319:2 Truthy
+undefined
+a='     ';
+'     '
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM334:2 Truthy
+undefined
+a='';
+''
+a=false;
+false
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM375:5 Falsy 
+undefined
+a=true;
+true
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM399:2 Truthy
+undefined
+a=NaN;
+NaN
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM422:5 Falsy 
+undefined
+a=null;
+null
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM445:5 Falsy 
+undefined
+a=[];
+[]
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM464:2 Truthy
+undefined
+a=undefined;
+undefined
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM503:5 Falsy 
+undefined
+a={};
+{}
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM522:2 Truthy
+undefined
+a=Infinity;
+Infinity
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM547:2 Truthy
+undefined
+a=NaN;
+NaN
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM578:5 Falsy 
+undefined
+a=-Infinity;
+-Infinity
+if(a){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+}
+VM604:2 Truthy
+undefined
+/*
+this is falsy
+false
+0, -0 and 0n
+"", '' (empty strings)
+null, undefined and NaN
+*/
+undefined
+var name ;
+undefined
+name;
+''
+var empname;
+undefined
+empname;
+undefined
+empname.toUpperCase();
+VM838:1 Uncaught TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+    at <anonymous>:1:9
+(anonymous) @ VM838:1
+if(empname===undefined){
+    console.log('Empty ');
+}
+VM951:2 Empty 
+undefined
+if(empname){
+    console.log(empname.toUpperCase());
+}
+else{
+    console.log('It nothing ');
+}
+VM1142:5 It nothing 
+undefined
+empname = 'Amit';
+'Amit'
+if(empname){
+    console.log(empname.toUpperCase());
+}
+else{
+    console.log('It nothing ');
+}
+VM1191:2 AMIT
+undefined
+var ename ;
+undefined
+ename = ename || '';
+console.log(ename.toUpperCase());
+VM1426:2 
+undefined
+ename;
+''
+ename = 'Ram';
+'Ram'
+ename = ename || '';
+console.log(ename.toUpperCase());
+VM1495:2 RAM
+undefined
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add();
+NaN
+undefined + undefined;
+NaN
+function add(x,y){
+    x = x || 0;
+    y  = y || 0;
+    return x + y;
+}
+undefined
+add();
+0
+add(null, null);
+0
+add('','');
+0
+add('', undefined);
+0
+add(false, '');
+0
+function add2(x=0, y=0){
+    return x + y;
+}
+undefined
+add2();
+0
+add2(NaN, NaN);
+NaN
+add(NaN, NaN);
+0
+add2('','');
+''
+add('','');
+0

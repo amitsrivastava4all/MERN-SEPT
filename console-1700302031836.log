@@ -1,0 +1,77 @@
+// Promise in JS
+undefined
+function add(x,y){
+    x = x+ 10;
+    y = y + 20;
+    return x + y;
+}
+undefined
+add(1,2);
+33
+console.log("I am Start ");
+setTimeout(()=>{
+    add(100,20);
+},4000);
+console.log("I am End ");
+VM328:1 I am Start 
+VM328:5 I am End 
+undefined
+console.log("I am Start ");
+setTimeout(()=>{
+    console.log(add(100,20));
+},4000);
+console.log("I am End ");
+VM349:1 I am Start 
+VM349:5 I am End 
+undefined
+VM349:3 150
+function getPizza(){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve("Pizza Prepare Eat it ");
+    },5000);
+    );
+    return pr;
+}
+const p = getPizza();
+p.then(data=>console.log(data)).catch(err=>console.log('Problem in Pizza Prepare ', err));
+console.log('(Loading....) Promise is ', p);
+
+VM887:6 Uncaught SyntaxError: Unexpected token ')'
+function getPizza(){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve("Pizza Prepare Eat it ");
+    },5000);
+    }
+    );
+    return pr;
+}
+const p = getPizza();
+p.then(data=>console.log(data)).catch(err=>console.log('Problem in Pizza Prepare ', err));
+console.log('(Loading....) Promise is ', p);
+
+VM900:12 (Loading....) Promise is  Promise {<pending>}
+undefined
+VM900:11 Pizza Prepare Eat it 
+p;
+Promise {<fulfilled>: 'Pizza Prepare Eat it '}
+function getPizza(){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            reject("Pizza MicroWave not Working ");
+           // resolve("Pizza Prepare Eat it ");
+    },5000);
+    }
+    );
+    return pr;
+}
+const p = getPizza();
+p.then(data=>console.log(data)).catch(err=>console.log('Problem in Pizza Prepare ', err));
+console.log('(Loading....) Promise is ', p);
+
+VM958:13 (Loading....) Promise is  Promise {<pending>}
+undefined
+VM958:12 Problem in Pizza Prepare  Pizza MicroWave not Working 
+p;
+Promise {<rejected>: 'Pizza MicroWave not Working '}
