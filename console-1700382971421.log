@@ -1,0 +1,60 @@
+function getPizza(){
+// Proxy
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            reject("Pizza MicroWave not Working ");
+           // resolve("Pizza Prepare Eat it ");
+    },5000);
+    }
+    );
+    return pr; // Pending Status
+}
+const p = getPizza();
+p.then(data=>console.log(data)).catch(err=>console.log('Problem in Pizza Prepare ', err));
+console.log('(Loading....) Promise is ', p);
+VM18:14 (Loading....) Promise is  Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+undefined
+VM18:13 Problem in Pizza Prepare  Pizza MicroWave not Working 
+p;
+Promise {<rejected>: 'Pizza MicroWave not Working '}
+function getPizza(){
+// Proxy
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+           // reject("Pizza MicroWave not Working ");
+            resolve("Pizza Prepare Eat it ");
+    },5000);
+    }
+    );
+    return pr; // Pending Status
+}
+const p = getPizza();
+p.then(data=>console.log(data)).catch(err=>console.log('Problem in Pizza Prepare ', err));
+console.log('(Loading....) Promise is ', p);
+VM34:14 (Loading....) Promise is  Promise {<pending>}
+undefined
+p;
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+VM34:13 Pizza Prepare Eat it 
+p;
+Promise {<fulfilled>: 'Pizza Prepare Eat it '}
+var arr = [10,20,30,40,50];
+undefined
+function callBack(e){
+    console.log('E is ',e);
+}
+undefined
+arr.forEach(callBack);
+VM215:2 E is  10
+VM215:2 E is  20
+VM215:2 E is  30
+VM215:2 E is  40
+VM215:2 E is  50
+undefined
+arr.forEach(e=>console.log(e));
+VM376:1 10
+VM376:1 20
+VM376:1 30
+VM376:1 40
+VM376:1 50
+undefined

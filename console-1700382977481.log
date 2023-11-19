@@ -1,0 +1,150 @@
+// Promise Methods
+undefined
+function cube(num, time){
+    const promise = new Promise(()=>{)
+    setTimeout(()=>{
+        num**3
+    }, time);
+}
+VM236:2 Uncaught SyntaxError: Unexpected token ')'
+function cube(num, time){
+    const promise = new Promise((resolve, reject )=>{
+        setTimeout(()=>{
+            if(num<10){
+        resolve(num**3); // Success
+            }
+            else{
+                reject("OOPS Number is too big for Cube ...");
+            }
+    }, time);
+    });
+    return promise;
+    
+}
+undefined
+const p = cube(3,4000);
+undefined
+p;
+Promise {<pending>}
+p;
+Promise {<fulfilled>: 27}
+const p = cube(30,4000);
+undefined
+p;
+Promise {<pending>}
+VM397:8 Uncaught (in promise) OOPS Number is too big for Cube ...
+(anonymous) @ VM397:8
+setTimeout (async)
+(anonymous) @ VM397:3
+cube @ VM397:2
+(anonymous) @ VM476:1
+p;
+Promise {<rejected>: 'OOPS Number is too big for Cube ...'}
+const p = cube(30,4000);
+p.then(data=>console.log(data)).catch(err=>console.log(err));
+Promise {<pending>}
+VM838:2 OOPS Number is too big for Cube ...
+const p = cube(3,4000);
+p.then(data=>console.log(data)).catch(err=>console.log(err));
+Promise {<pending>}
+VM843:2 27
+const pr = Promise.all([cube(3,4000), cube(5,5000), cube(2,7000)]);
+pr.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1265:2 (3) [27, 125, 8]
+const pr = Promise.all([cube(30,4000), cube(5,5000), cube(2,7000)]);
+pr.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1277:2 OOPS Number is too big for Cube ...
+const pr = Promise.all([cube(3,4000), cube(5,5000), cube(20,1000)]);
+pr.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1301:2 OOPS Number is too big for Cube ...
+const pr = Promise.allSettled([cube(3,4000), cube(5,5000), cube(20,1000)]);
+pr.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1312:2 (3) [{…}, {…}, {…}]0: {status: 'fulfilled', value: 27}1: {status: 'fulfilled', value: 125}2: {status: 'rejected', reason: 'OOPS Number is too big for Cube ...'}length: 3[[Prototype]]: Array(0)
+const p = Promise.race(cube(3,5000), cube(2,1000), cube(200,500));
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+VM1751:2 Error TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.race (<anonymous>)
+    at <anonymous>:1:19
+Promise {<fulfilled>: undefined}
+VM397:8 Uncaught (in promise) OOPS Number is too big for Cube ...
+(anonymous) @ VM397:8
+setTimeout (async)
+(anonymous) @ VM397:3
+cube @ VM397:2
+(anonymous) @ VM1751:1
+const p = Promise.race(cube(3,5000), cube(2,1000), cube(200,14500));
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+VM1757:2 Error TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.race (<anonymous>)
+    at <anonymous>:1:19
+Promise {<fulfilled>: undefined}
+VM397:8 Uncaught (in promise) OOPS Number is too big for Cube ...
+(anonymous) @ VM397:8
+setTimeout (async)
+(anonymous) @ VM397:3
+cube @ VM397:2
+(anonymous) @ VM1757:1
+const p = Promise.race([cube(3,5000), cube(2,1000), cube(200,14500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1814:2 8
+const p = Promise.race([cube(3,5000), cube(2,1000), cube(200,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1821:2 Error OOPS Number is too big for Cube ...
+const p = Promise.any([cube(3,5000), cube(2,1000), cube(200,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1831:2 8
+const p = Promise.any([cube(3,5000), cube(112,1000), cube(200,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1845:2 27
+const p = Promise.any([cube(34,5000), cube(112,1000), cube(200,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1863:2 Error AggregateError: All promises were rejected
+const p = Promise.any([cube(3,5000), cube(2,1000), cube(5,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1875:2 125
+const p = Promise.any([cube(3,5000), cube(2,1000), cube(50,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1885:2 8
+const p = Promise.any([cube(3,5000), cube(20,1000), cube(50,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1899:2 27
+const p = Promise.any([cube(30,5000), cube(20,1000), cube(50,500)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1905:2 Error AggregateError: All promises were rejected
+const p = Promise.any([cube(3,0), cube(2,0), cube(7,0)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1935:2 27
+const p = Promise.any([cube(3,0), cube(2,0), cube(7,0)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1937:2 27
+const p = Promise.any([cube(3,0), cube(2,0), cube(7,0)]);
+p.then(data=>console.log(data)).catch(e=>console.log('Error',e));
+
+Promise {<pending>}
+VM1939:2 27

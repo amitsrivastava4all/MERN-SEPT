@@ -1,0 +1,62 @@
+// async await
+undefined
+function cube(num, time){
+    const pr = new Promise((resolve, reject)=>{
+             setTimeout(()=>{"
+                 if(num<10){
+            resolve(num**3);
+             }
+                             else{
+                                 reject("OOPS Number is too big ");
+                             }
+    }, time)
+    });
+    return pr;
+   
+}
+VM331:3 Uncaught SyntaxError: Invalid or unexpected token
+function cube(num, time){
+    const pr = new Promise((resolve, reject)=>{
+             setTimeout(()=>{
+                 if(num<10){
+            resolve(num**3);
+             }
+                             else{
+                                 reject("OOPS Number is too big ");
+                             }
+    }, time)
+    });
+    return pr;
+   
+}
+undefined
+function total(){
+    /*cube(3,2000).then(r=>{
+        cube(4,4000).then(q=>{
+            cube(2,6000)
+        })
+    }*/
+    const result = await cube(3,2000) + await cube(4,4000) + await cube(5 , 6000);
+    return result;
+}
+VM669:7 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+async function total(){
+    /*cube(3,2000).then(r=>{
+        cube(4,4000).then(q=>{
+            cube(2,6000)
+        })
+    }*/
+    const result = await cube(3,2000) + await cube(4,4000) + await cube(5 , 6000);
+    return result;
+}
+undefined
+const p = total(); // async
+p.then(data=>console.log(data)).catch(e=>console.log(e));
+Promise {<pending>}
+VM958:2 216
+const p = total(); // async
+console.log('I am Here after call total');
+p.then(data=>console.log(data)).catch(e=>console.log(e));
+VM1006:2 I am Here after call total
+Promise {<pending>}
+VM1006:3 216
