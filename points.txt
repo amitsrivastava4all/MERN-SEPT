@@ -1,0 +1,13 @@
+When we have lot of DOM (Dynamic Web Pages)
+
+React JS
+1. Zero DOM
+Document.createElement(‘h2’); // it create a new h2,  so h2 will be render on screen (paint) pixels render (slow process)
+
+DOM has some problems
+1. Rendering
+2. Dom has elements
+e.g div , h2 , span
+Dom elements are deep nested (Website is complex) so it take time to traverse and slow to identify where is the change?
+Render the entire DOM Tree, Painting is slow , user experience is bad.
+	
